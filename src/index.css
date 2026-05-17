@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+:root {
+  --text: #65736B; /* muted */
+  --text-h: #06291F; /* pine */
+  --bg: #FAFAF6; /* background */
+  --border: #DDE5DF;
+  --code-bg: rgba(29, 107, 79, 0.08);
+  --accent: #0B3D2E; /* forest */
+  --accent-bg: rgba(11, 61, 46, 0.08);
+  --accent-border: rgba(11, 61, 46, 0.45);
+  --social-bg: rgba(234, 243, 238, 0.9);
+
+  --shadow-soft:
+    rgba(0, 0, 0, 0.08) 0 12px 30px -12px, rgba(0, 0, 0, 0.04) 0 6px 14px -10px;
+
+  --forest: #0B3D2E;
+  --pine: #06291F;
+  --leaf: #1D6B4F;
+  --mint: #EAF3EE;
+  --muted: #65736B;
+  --border-color: #DDE5DF;
+  --page-bg: #FAFAF6;
+  --white: #FFFFFF;
+
+  --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    'Apple Color Emoji', 'Segoe UI Emoji';
+  --heading: var(--sans);
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
+
+  font: 16px/145% var(--sans);
+  letter-spacing: 0.01em;
+  color-scheme: light;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Admin panel is designed for light mode for municipal presentation.
+   Keep dark adjustments minimal to avoid visual clashes. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --text: #A0ACA4;
+    --text-h: #EAF3EE;
+    --bg: #07160F;
+    --border: #133326;
+    --code-bg: rgba(234, 243, 238, 0.08);
+    --social-bg: rgba(6, 41, 31, 0.7);
+  }
+}
+
+#root {
+  min-height: 100svh;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+p {
+  margin: 0;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}

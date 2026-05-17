@@ -1,0 +1,6 @@
+- [x] Update src/index.css Tailwind directives to Tailwind v4 (@import "tailwindcss";)
+- [x] Update vite.config.ts to include tailwindcss plugin (@tailwindcss/vite)
+- [x] npm install -D @tailwindcss/vite
+- [x] npm run build
+- [ ] npm run dev
+- [ ] Confirm styling is applied (cards/sidebar/tables/badges)
